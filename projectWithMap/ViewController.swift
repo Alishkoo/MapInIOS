@@ -129,6 +129,17 @@ class ViewController: UIViewController{
         }
     }
     
+    
+    //MARK: friends Annotations
+    private func addFriendAnnotations(){
+        
+        let friend1 = FriendAnnotation(coordinate: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), title: "John Doe", subtitle: "San Francisco", image: UIImage(named: "me"))
+        let friend2 = FriendAnnotation(coordinate: CLLocationCoordinate2D(latitude: 34.0522, longitude: -118.2437), title: "Jane Smith", subtitle: "Los Angeles", image: UIImage(named: "me"))
+
+            mapView.addAnnotations([friend1, friend2])
+        
+    }
+    
 }
 
 
@@ -144,7 +155,7 @@ extension ViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
         
-        //clear all selections
+        //clear all нетselections
         clearAllSelections()
         
         guard let selectedAnnotation = annotation as? PlaceAnnotation else {return}

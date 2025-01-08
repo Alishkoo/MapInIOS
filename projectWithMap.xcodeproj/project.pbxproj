@@ -20,6 +20,8 @@
 		12DEEE922D2BDFF300201BBB /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DEEE912D2BDFF300201BBB /* CLLocationExtensions.swift */; };
 		12DEEE952D2BEC8800201BBB /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DEEE942D2BEC8800201BBB /* PlacesTableViewController.swift */; };
 		12E9DDA82D2EA37100F5AAA5 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E9DDA72D2EA37100F5AAA5 /* PlaceDetailViewController.swift */; };
+		12E9DDAA2D2ECF5A00F5AAA5 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E9DDA92D2ECF5A00F5AAA5 /* String+Extensions.swift */; };
+		12E9DDAC2D2ED1D900F5AAA5 /* FriendAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E9DDAB2D2ED1D900F5AAA5 /* FriendAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		12DEEE912D2BDFF300201BBB /* CLLocationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtensions.swift; sourceTree = "<group>"; };
 		12DEEE942D2BEC8800201BBB /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 		12E9DDA72D2EA37100F5AAA5 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		12E9DDA92D2ECF5A00F5AAA5 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		12E9DDAB2D2ED1D900F5AAA5 /* FriendAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				12DEEE8E2D2BDEE300201BBB /* PlaceAnnotation.swift */,
+				12E9DDAB2D2ED1D900F5AAA5 /* FriendAnnotation.swift */,
 			);
 			path = Annotations;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				12DEEE912D2BDFF300201BBB /* CLLocationExtensions.swift */,
+				12E9DDA92D2ECF5A00F5AAA5 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -296,8 +302,10 @@
 			files = (
 				12DEEE922D2BDFF300201BBB /* CLLocationExtensions.swift in Sources */,
 				12DEEE8F2D2BDEE300201BBB /* PlaceAnnotation.swift in Sources */,
+				12E9DDAC2D2ED1D900F5AAA5 /* FriendAnnotation.swift in Sources */,
 				12E9DDA82D2EA37100F5AAA5 /* PlaceDetailViewController.swift in Sources */,
 				12B948C12D2330AF00CB3C81 /* ViewController.swift in Sources */,
+				12E9DDAA2D2ECF5A00F5AAA5 /* String+Extensions.swift in Sources */,
 				12B948BD2D2330AF00CB3C81 /* AppDelegate.swift in Sources */,
 				12B948BF2D2330AF00CB3C81 /* SceneDelegate.swift in Sources */,
 				12DEEE952D2BEC8800201BBB /* PlacesTableViewController.swift in Sources */,
