@@ -7,7 +7,7 @@ import MapKit
 class PlacesTableViewController: UITableViewController {
     
     var userLocation: CLLocation
-    let places: [PlaceAnnotation]
+    var places: [PlaceAnnotation]
     
     init(userLocation: CLLocation, places: [PlaceAnnotation]){
         self.userLocation = userLocation
@@ -16,7 +16,7 @@ class PlacesTableViewController: UITableViewController {
         
         //register cell
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "PlaceCell")
-//        self.places.swapAt()
+        self.places.swapAt(indexForSelectedRow ?? 0, 0)
     }
     
     required init?(coder: NSCoder) {
@@ -46,8 +46,18 @@ class PlacesTableViewController: UITableViewController {
 
 
 
-
+//MARK: Cell of tableView
 extension PlacesTableViewController{
+    
+    //when row of the cell selected
+    //allow to get selected place
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let place = places[indexPath.row]
+        let placeDetailVC = PlaceDetailViewController(place: place)
+        present(placeDetailVC, animated: true)
+    }
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         places.count
@@ -61,7 +71,9 @@ extension PlacesTableViewController{
         var content = cell.defaultContentConfiguration()
         content.text = place.name
         content.secondaryText = formatDistanceForDisplay(calculateDistance(from: userLocation, to: place.location))
+        
         cell.contentConfiguration = content
+        cell.backgroundColor = place.isSelected ? UIColor.lightGray: UIColor.clear
         return cell
     }
     

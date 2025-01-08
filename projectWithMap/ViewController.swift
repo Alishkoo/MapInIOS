@@ -135,7 +135,17 @@ class ViewController: UIViewController{
 //MARK: MKMapViewDelegate
 extension ViewController: MKMapViewDelegate {
     
+    private func clearAllSelections(){
+        self.places = self.places.map { place in
+            place.isSelected = false
+            return place
+        }
+    }
+    
     func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
+        
+        //clear all selections
+        clearAllSelections()
         
         guard let selectedAnnotation = annotation as? PlaceAnnotation else {return}
         
