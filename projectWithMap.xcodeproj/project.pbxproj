@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120802D12D3D68FA0075C2E7 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120802D02D3D68FA0075C2E7 /* UIImage+Extensions.swift */; };
+		120802D32D3D6B220075C2E7 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120802D22D3D6B210075C2E7 /* UIImageView.swift */; };
 		12B948BD2D2330AF00CB3C81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B948BC2D2330AF00CB3C81 /* AppDelegate.swift */; };
 		12B948BF2D2330AF00CB3C81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B948BE2D2330AF00CB3C81 /* SceneDelegate.swift */; };
 		12B948C12D2330AF00CB3C81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B948C02D2330AF00CB3C81 /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		120802D02D3D68FA0075C2E7 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		120802D22D3D6B210075C2E7 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		12B948B92D2330AF00CB3C81 /* projectWithMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectWithMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B948BC2D2330AF00CB3C81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12B948BE2D2330AF00CB3C81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 			children = (
 				12DEEE912D2BDFF300201BBB /* CLLocationExtensions.swift */,
 				12E9DDA92D2ECF5A00F5AAA5 /* String+Extensions.swift */,
+				120802D02D3D68FA0075C2E7 /* UIImage+Extensions.swift */,
+				120802D22D3D6B210075C2E7 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -306,7 +312,9 @@
 				12E9DDA82D2EA37100F5AAA5 /* PlaceDetailViewController.swift in Sources */,
 				12B948C12D2330AF00CB3C81 /* ViewController.swift in Sources */,
 				12E9DDAA2D2ECF5A00F5AAA5 /* String+Extensions.swift in Sources */,
+				120802D32D3D6B220075C2E7 /* UIImageView.swift in Sources */,
 				12B948BD2D2330AF00CB3C81 /* AppDelegate.swift in Sources */,
+				120802D12D3D68FA0075C2E7 /* UIImage+Extensions.swift in Sources */,
 				12B948BF2D2330AF00CB3C81 /* SceneDelegate.swift in Sources */,
 				12DEEE952D2BEC8800201BBB /* PlacesTableViewController.swift in Sources */,
 			);

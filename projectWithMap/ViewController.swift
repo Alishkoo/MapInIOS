@@ -46,6 +46,9 @@ class ViewController: UIViewController{
         locationManager?.requestLocation()
         
         setupUI()
+        
+        //to show friend with images
+        addFriendAnnotations()
     }
     
     
@@ -146,6 +149,7 @@ class ViewController: UIViewController{
 //MARK: MKMapViewDelegate
 extension ViewController: MKMapViewDelegate {
     
+    //MARK: clearAllSelections
     private func clearAllSelections(){
         self.places = self.places.map { place in
             place.isSelected = false
@@ -153,6 +157,7 @@ extension ViewController: MKMapViewDelegate {
         }
     }
     
+    //MARK: Selected annotation
     func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
         
         //clear all нетselections
@@ -167,6 +172,40 @@ extension ViewController: MKMapViewDelegate {
         
     }
     
+    //MARK: Annotation Friends shows
+    func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
+        
+        //checking the type of annotation
+        guard let friendAnnotation = annotation as? FriendAnnotation else { return nil }
+        
+        //creating and reusing our friend annotation
+        let identifier = "FriendAnnotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: friendAnnotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true //turning всплывающее окно
+        }
+        
+        //image
+        if let image = friendAnnotation.image {
+            let maxSize: CGFloat = 40 // max size photo
+            let size = CGSize(width: maxSize, height: maxSize)
+            let scaledImage = image.resize(to: size)
+            
+            annotationView?.image = scaledImage
+            
+            //rouding image
+            if let circularImage = scaledImage?.makeCircular() {
+                annotationView?.image = circularImage
+            }
+            
+        }
+        
+        
+        return annotationView
+        
+    }
 }
 
 
@@ -192,7 +231,7 @@ extension ViewController: UITextFieldDelegate{
 extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
+        
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
